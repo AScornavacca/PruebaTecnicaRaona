@@ -1,10 +1,9 @@
 import React from "react";
 import { DocumentCardImageExample } from "./components/Grid";
+import { useSelector } from "react-redux"
 import { useState, useEffect } from "react"
 import { useDispatch } from "react-redux"
-import {ModalBasicExample} from "./components/Modal";
-
-
+import { ModalBasicExample } from "./components/Modal";
 interface Movie {
     overview: string;
     release_date: any;

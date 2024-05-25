@@ -21,7 +21,7 @@ const oneNoteIconProps: IIconProps = {
   styles: { root: { color: '#813a7c', fontSize: '120px', width: '120px', height: '120px' } },
 };
 type Props = {
-    title?: any,
+    title?: string,
     date?: string,
     img?: string
 }
