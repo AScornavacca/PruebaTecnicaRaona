@@ -3,6 +3,7 @@ import { DocumentCardImageExample } from "./components/Grid";
 import { useState, useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { ModalBasicExample } from "./components/Modal";
+import './Main.sass';
 interface Movie {
     overview: string;
     release_date: any;
