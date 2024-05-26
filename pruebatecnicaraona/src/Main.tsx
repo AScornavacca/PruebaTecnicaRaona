@@ -49,7 +49,11 @@ function Main() {
     
    
  return (
-   <div >
+    
+   <div className="container" >
+    <h1 className="title">Prueba técnica Raona</h1>
+    <div className="card-container">
+    
     {movies.map(movie =>(
           <li key={movie.id}><DocumentCardImageExample title={movie.title} 
             img={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
@@ -60,7 +64,7 @@ function Main() {
              
           
         ))}
-        
+     </div>   
    </div>
 
    
