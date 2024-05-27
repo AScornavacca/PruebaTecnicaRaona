@@ -6,8 +6,10 @@
 
 /* Estilos para el título */
 .title {
-    font-size: 24px; /* Tamaño de la fuente */
+    font-size: 50px; /* Tamaño de la fuente */
     margin-bottom: 20px; /* Espacio inferior */
+    color: #d30606;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Estilos para el contenedor de las cartas */
@@ -20,7 +22,7 @@
 
 /* Estilos para las cartas */
 .card {
-    background-color: #f0f0f0; /* Color de fondo de las cartas */
+    background-color: #ef2e2e; /* Color de fondo de las cartas */
     padding: 20px; /* Espaciado interno */
     border-radius: 8px; /* Borde redondeado */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
@@ -30,4 +32,39 @@
 /* Efecto de levantamiento al pasar el cursor sobre las cartas */
 .card:hover {
     transform: translateY(-5px); /* Efecto de levantamiento */
+}
+.modal-title {
+    font-size: 28px; /* Tamaño de la fuente */
+    font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto para el texto */
+    color:#ef2e2e;
+
+}
+.container-120 {
+    background-color: #323130;
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.body-110{
+    color: aliceblue;
+}
+.heading-109 {
+    color: rgb(237, 235, 233);
+    font-weight: 800;
+    font-size: inherit;
+    margin: 0px;
+}
+.root-97 {
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: rgb(237, 235, 233);
+    border: 1px solid rgb(237, 235, 233);
+    max-width: 320px;
+    min-width: 206px;
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 320px;
+    user-select: none;
 }
