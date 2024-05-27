@@ -12,9 +12,9 @@ root.render(
   <React.StrictMode>
     
     <Provider store={store}> 
-    <div className='container'> 
+    
       <Main/>
-      </div>
+      
     </Provider> 
   </React.StrictMode>
   

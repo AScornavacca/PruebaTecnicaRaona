@@ -1,42 +1,42 @@
-/* Estilos para el contenedor principal */
+
 .container {
-    text-align: center; /* Alinea el contenido al centro */
-    margin-top: 20px; /* Espacio superior */
+    text-align: center; 
+    margin-top: 20px; 
 }
 
-/* Estilos para el título */
+
 .title {
-    font-size: 50px; /* Tamaño de la fuente */
-    margin-bottom: 20px; /* Espacio inferior */
-    color: #d30606;
+    font-size: 50px; 
+    margin-bottom: 20px; 
+    color: #d13438;
     font-family: 'Roboto', sans-serif;
    
 }
 
 /* Estilos para el contenedor de las cartas */
 .card-container {
-    display: grid; /* Usamos grid para crear una grilla */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas de tamaño variable */
-    gap: 20px; /* Espacio entre las cartas */
-    justify-content: center; /* Centra el contenido horizontalmente */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    justify-content: center; 
 }
 
 /* Estilos para las cartas */
 .card {
-    background-color: #ef2e2e; /* Color de fondo de las cartas */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 8px; /* Borde redondeado */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    transition: transform 0.3s ease; /* Efecto de transición al pasar el cursor */
+    background-color: #ef2e2e; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
 }
 
-/* Efecto de levantamiento al pasar el cursor sobre las cartas */
+
 .card:hover {
-    transform: translateY(-5px); /* Efecto de levantamiento */
+    transform: translateY(-5px); 
 }
 .modal-title {
-    font-size: 28px; /* Tamaño de la fuente */
-    font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto para el texto */
+    font-size: 28px; 
+    font-family: 'Roboto', sans-serif; 
     color:#ef2e2e;
 
 }
