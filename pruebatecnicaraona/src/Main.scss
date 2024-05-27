@@ -10,6 +10,7 @@
     margin-bottom: 20px; /* Espacio inferior */
     color: #d30606;
     font-family: 'Roboto', sans-serif;
+   
 }
 
 /* Estilos para el contenedor de las cartas */
@@ -58,7 +59,7 @@
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     background-color: rgb(237, 235, 233);
-    border: 1px solid rgb(237, 235, 233);
+    border: 1px solid rgb(0, 0, 0);
     max-width: 320px;
     min-width: 206px;
     position: relative;

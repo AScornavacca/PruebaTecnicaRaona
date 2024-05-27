@@ -27,7 +27,7 @@ export const DocumentCardImageExample: React.FunctionComponent<Props> = (props) 
           'Last modified by Annie Lindqvist and 2 others in March 13, 2018.'
         }
         styles={cardStyles}
-        onClickHref="http://bing.com"
+        onClickHref=""
       >
         <DocumentCardImage height={150} imageFit={ImageFit.cover} imageSrc={props.img} />
         <DocumentCardDetails>
