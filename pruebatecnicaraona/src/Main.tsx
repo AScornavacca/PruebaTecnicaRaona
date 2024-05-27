@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { DocumentCardImageExample } from "./components/Grid";
 import { useDispatch } from "react-redux";
 import { ModalBasicExample } from "./components/Modal";
-import { SearchBox } from "@fluentui/react";
+import { SearchBox, Dropdown, IDropdownOption } from "@fluentui/react";
 import './Main.scss';
 
 interface Movie {
@@ -17,6 +17,7 @@ interface Movie {
 function Main() {
     const [movies, setMovies] = useState<Movie[]>([]);
     const [filteredMovies, setFilteredMovies] = useState<Movie[]>([]);
+    const [resultsPerPage, setResultsPerPage] = useState<number>(5); // Estado para la cantidad de resultados por página
     const dispatch = useDispatch();
 
     const peticion = async () => {
@@ -36,7 +37,7 @@ function Main() {
                 const data = await respuesta.json();
                 console.log('datos recibidos', data);
                 setMovies(data.results);
-                setFilteredMovies(data.results); // Inicialmente mostrar todas las películas
+                setFilteredMovies(data.results); 
             } else {
                 console.error('error al hacer la solicitud', respuesta.status);
             }
@@ -49,12 +50,26 @@ function Main() {
         peticion();
     }, []);
 
-    // Función para manejar cambios en el campo de búsqueda
+    
     const handleSearchChange = (newValue: string) => {
         const filtered = movies.filter(movie =>
             movie.title.toLowerCase().includes(newValue.toLowerCase())
         );
         setFilteredMovies(filtered);
+    };
+
+    
+    const options: IDropdownOption[] = [
+        { key: 5, text: '5' },
+        { key: 10, text: '10' },
+        { key: 20, text: '20' },
+    ];
+
+    
+    const handleResultsPerPageChange = (event: React.FormEvent<HTMLDivElement>, option?: IDropdownOption) => {
+        if (option) {
+            setResultsPerPage(option.key as number);
+        }
     };
 
     return (
@@ -64,8 +79,18 @@ function Main() {
                 placeholder="Buscar películas por título..."
                 onChange={(event, newValue) => handleSearchChange(newValue || "")}
             />
+            <div className="container">
+            <Dropdown
+                placeholder="Resultados por página"
+                options={options}
+                selectedKey={resultsPerPage}
+                onChange={handleResultsPerPageChange}
+                
+            />
+           </div>
             <div className="card-container">
-                {filteredMovies.map(movie => (
+                {/* Renderizar solo la cantidad seleccionada de películas por página */}
+                {filteredMovies.slice(0, resultsPerPage).map(movie => (
                     <li key={movie.id}>
                         <DocumentCardImageExample
                             title={movie.title}
